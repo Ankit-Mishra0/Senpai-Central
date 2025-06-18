@@ -1,0 +1,17 @@
+.trend {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+.trend::-webkit-scrollbar {
+  height: 8px;
+}
+
+.trend:hover::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.trend::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

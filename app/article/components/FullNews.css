@@ -1,0 +1,94 @@
+.heading {
+  text-shadow: 0 0 1px rgba(230, 11, 226, 0.339),
+    0 0 2px rgba(172, 162, 162, 0.902);
+  margin-bottom: 20px;
+}
+.prose h2 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  color: rgb(216, 69, 216);
+  font-weight: bold;
+}
+.prose p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 4px rgba(172, 162, 162, 0.902),
+    0 0 8px rgba(172, 162, 162, 0.902);
+  transition: all 0.3s ease;
+}
+.prose p:hover {
+  text-shadow: 0 0 6px rgba(230, 226, 226, 0.802),
+    0 0 14px rgba(230, 226, 226, 0.802);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.prose .responsive-img {
+  padding: 0 !important;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+  margin: 3rem 0;
+}
+
+.prose ol li {
+  margin: 20px 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: rgb(224, 124, 141);
+}
+.prose img {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+.prose strong {
+  font-size: 1.5rem;
+  color: rgb(228, 0, 0);
+  text-shadow: none;
+  
+}
+.prose strong::before {
+  content: "• ";
+  color: rgb(228, 0, 0);
+  font-size: 1.5rem;
+  margin-right: 0.3em;
+  
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.prose th,
+.prose td {
+  padding: 1rem 0.75rem;
+  border: 1px solid #e0e0e0;
+  font-size: 1.1rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.prose thead {
+  background: rgb(216, 69, 216);
+  color: #fff;
+  font-weight: bold;
+}
+
+.prose tr:hover {
+  background: #b07ac1;
+  color: black;
+  transition: background 0.2s;
+}

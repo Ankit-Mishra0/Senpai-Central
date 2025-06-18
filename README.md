@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Senpai Central
+
+Senpai Central is a modern web application for anime and manga fans. It brings you trending news, anime rankings, and more—all in one place. The project is built with [Next.js](https://nextjs.org) for the frontend and uses custom Python scrapers for fetching the latest content.
+
+---
+
+## ⚠️ Usage Notice
+
+** Please use or deploy this project only after obtaining permission from the repository owner.**
+
+---
+
+## Features
+
+- **Trending Anime News:**  
+  Stay updated with the latest and most popular news from the anime world.
+
+- **Anime Rankings:**  
+  Discover top-ranked anime series and movies, updated regularly.
+
+- **Full Article Scraping:**  
+  Read complete articles directly within the app, thanks to integrated backend scrapers.
+
+- **Modern UI:**  
+  Enjoy a clean, responsive, and user-friendly interface.
+
+---
+
+## Roadmap
+
+Planned features for future releases:
+
+- **Latest Anime Trailers:**  
+  Watch the newest trailers for upcoming and ongoing anime.
+
+- **User Authentication:**  
+  Secure login and signup functionality for a personalized experience.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Ankit-Mishra0/Senpai-Central.git
+cd Senpai-Central
+```
+
+### 2. Set Up Python Virtual Environment (for scrapers)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### 3. Install Node.js Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 4. Run the Development Server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- `app/` — Next.js frontend code
+- `i-central/app/scrapper/` — Python scrapers for news and articles
+- `requirements.txt` — Python dependencies
+- `README.md` — Project documentation
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploy the frontend easily with [Vercel](https://vercel.com/).  
+Backend scrapers can be deployed on any Python-compatible server.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pull requests and issues are welcome!  
+Feel free to suggest features or report bugs.
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Repository

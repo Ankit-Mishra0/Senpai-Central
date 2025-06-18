@@ -1,0 +1,9 @@
+.svg {
+ display: inline-block;
+  transition: transform 0.3s ease;
+    will-change: transform;
+}
+.svg:hover {
+   transform:  translate3d(-5px,-5px,-5px) rotate(-10deg) scale3d(1.5, 1.5, 1.1);
+
+}
