@@ -2,6 +2,7 @@
 import Cards from "@/app/components/Cards";
 import React from "react";
 import dynamic from "next/dynamic";
+import SearchIcon from "@mui/icons-material/Search";
 const LottieClient = dynamic(() => import("../../components/LottieClient"), {
   ssr: false,
 });
@@ -9,6 +10,8 @@ const AllNews = () => {
   const [newsType, setNewsType] = React.useState("News");
   const [loading, setLoading] = React.useState(true);
   const [articles, setArticles] = React.useState([]);
+  const [search, setSearch] = React.useState("");
+
   const fetchNews = () => {
     setLoading(true);
     let route = "";
@@ -91,15 +94,44 @@ const AllNews = () => {
       ) : articles.length == 0 ? (
         <p className="text-white">No articles found.</p>
       ) : (
-        <div className="relative w-full h-full flex flex-wrap items-center justify-center mt-3 mb-3 gap-6 p-2 ">
-          {articles.map((item, index) => (
-            <Cards
-              key={index}
-              title={item.title}
-              url={item.url}
-              image={item.image}
-            />
-          ))}
+        <div className="">
+          <div className="relative flex items-center justify-center ">
+            <input
+              className=" bg-gradient-to-r from-gray-400 to-gray-600 text-white outline-none mt-5 sm:w-[30%] rounded-xl text-center p-0.5 text-lg font-bold"
+              type="text"
+              id="search"
+              onChange={(e) => setSearch(e.target.value)}
+              value={search}
+            ></input>
+            <span className="text-white mt-5 ml-1">
+              <SearchIcon />
+            </span>
+          </div>
+          <div className="relative w-full h-full flex flex-wrap items-center justify-center mt-4 mb-3 gap-6 p-2 ">
+            {articles
+              .filter((item) => {
+                if (!search.trim()) return true;
+                const Search = search
+                  .split(" ")
+                  .join("")
+                  .toLowerCase();
+                const description =
+                  item.description?.toLowerCase().split(" ").join("") || "";
+                const title = item.title?.toLowerCase().split(" ").join("");
+                return (
+                  description.includes(Search) ||
+                  title.includes(Search)
+                );
+              })
+              .map((item, index) => (
+                <Cards
+                  key={index}
+                  title={item.title}
+                  url={item.url}
+                  image={item.image}
+                />
+              ))}
+          </div>
         </div>
       )}
     </div>

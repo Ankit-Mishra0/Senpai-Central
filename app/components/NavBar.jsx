@@ -21,13 +21,13 @@ const NavBar = () => {
           className="size-17  border-b-1 mb-2 "
         />
       </div>
-      <div className="flex flex-row gap-5 items-center mb-2 mx-auto">
+      <div className="flex flex-row gap-5 items-center mb-2 mx-auto outline-none">
         <Link href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill={pathname === "/" ? "#a855f7" : "white"}
-            className="inline-block size-9 svg"
+            className="inline-block size-9 svg outline-none"
             aria-label="Home"
             role="img"
             tabIndex="0"
@@ -42,7 +42,7 @@ const NavBar = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill={pathname === "/news" ? "#a855f7" : "white"}
-            className="inline-block size-9 svg"
+            className="inline-block size-9 svg outline-none"
             aria-label="News"
             role="img"
             tabIndex="0"
@@ -61,7 +61,7 @@ const NavBar = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill={pathname === "/reviews" ? "#a855f7" : "white"}
-            className="inline-block size-9 svg "
+            className="inline-block size-9 svg outline-none"
             aria-label="Reviews"
             role="img"
             tabIndex="0"
@@ -75,7 +75,7 @@ const NavBar = () => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill={pathname === "/contact-us" ? "#a855f7" : "white"}
-            className="inline-block size-9 svg"
+            className="inline-block size-9 svg outline-none"
             aria-label="contact-us"
             role="img"
             tabIndex="0"
