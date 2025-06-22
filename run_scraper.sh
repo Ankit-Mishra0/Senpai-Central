@@ -12,5 +12,5 @@ python /Users/ankitmishra/senpai-central/app/scrapper/anime_list/anime_list_scra
 # Run second script and save log
 python /Users/ankitmishra/senpai-central/app/scrapper/trending_news/trendingnews-scrap.py > /Users/ankitmishra/senpai-central/logs/trendingnews_$NOW.log 2>&1
 
-# Run second script and save log
+# Run third script and save log
 python /Users/ankitmishra/senpai-central/app/scrapper/all_anime_news/all_anime_news_scrapper.py  > /Users/ankitmishra/senpai-central/logs/all_anime_news_$NOW.log 2>&1

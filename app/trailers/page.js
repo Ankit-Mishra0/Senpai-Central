@@ -1,8 +1,9 @@
 import React from 'react'
 import Particles from "../components/Particle";
 import NavBar from '../components/NavBar';
-import AllNews from './components/AllNews';
+import AllTrailers from './component/AllTrailers';
 const page = props => {
+    
   return (
     <div  className="bg-black min-h-screen relative w-full flex flex-col items-center">
        <Particles
@@ -17,7 +18,8 @@ const page = props => {
         disableRotation={false}
       />
       <NavBar />
-      <AllNews />
+      <AllTrailers />
+      
     </div>
   )
 }

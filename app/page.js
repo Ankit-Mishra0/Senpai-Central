@@ -5,8 +5,10 @@ import NewsType from "./components/NewsType";
 import Particles from "./components/Particle";
 import fireAnimation from "./animations/fire.json";
 import crownAnimation from "./animations/crown.json";
+import youtubeAnimation from "./animations/youtube.json";
 import Trendingnews from "./components/Trendingnews";
 import AnimeRankings from "./components/AnimeRankings";
+import AnimeTrailers from "./components/AnimeTrailers";
 
 export default function Home() {
   return (
@@ -37,6 +39,12 @@ export default function Home() {
         animationClassName="w-8 h-8 mr-1 ml-0 mt-1 mb-1"
       />
       <AnimeRankings />
+      <NewsType
+        type="Anime Trailers"
+        animationData={ youtubeAnimation}
+        animationClassName="w-8 h-8 mr-1 ml-0 mt-1 mb-1"
+      />
+      <AnimeTrailers />
     </div>
   );
 }

@@ -8,7 +8,7 @@ const LottieClient = dynamic(() => import("./LottieClient"), {
 
 const NewsType = ({ type, animationData,animationClassName  }) => {
   return (
-    <div className="w-full mt-7.5 mb-0.5">
+    <div className="w-full mt-7 mb-1">
       <h1 className="inline-flex items-center w-auto ml-1 text-3xl font-extrabold bg-gradient-to-r from-pink-400 to-purple-700 text-black rounded px-2 py-1 ">
         {animationData && (
           <div className={animationClassName}>

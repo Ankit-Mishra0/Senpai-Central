@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "./scrollNews.css";
+import "./scroll.css";
 import TiltedCard from "./Cards";
 import { useState, useEffect } from "react";
 

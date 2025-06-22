@@ -96,8 +96,9 @@ const AllNews = () => {
       ) : (
         <div className="">
           <div className="relative flex items-center justify-center ">
+            <div className="absolute h-8 bg-gradient-to-r from-pink-400 via-purple-600 to-blue-800 text-white outline-none mt-5 sm:w-[30%] rounded-xl text-center p-0.5 text-lg font-bold z-0 transform -translate-x-4 blur-lg animate-[pulse_8s_linear_infinite]"></div>
             <input
-              className=" bg-gradient-to-r from-gray-400 to-gray-600 text-white outline-none mt-5 sm:w-[30%] rounded-xl text-center p-0.5 text-lg font-bold"
+              className=" bg-gradient-to-r from-gray-400 to-gray-600 text-white outline-none mt-5 sm:w-[30%] rounded-xl text-center p-0.5 text-lg font-bold z-1"
               type="text"
               id="search"
               onChange={(e) => setSearch(e.target.value)}
@@ -111,17 +112,11 @@ const AllNews = () => {
             {articles
               .filter((item) => {
                 if (!search.trim()) return true;
-                const Search = search
-                  .split(" ")
-                  .join("")
-                  .toLowerCase();
+                const Search = search.split(" ").join("").toLowerCase();
                 const description =
                   item.description?.toLowerCase().split(" ").join("") || "";
                 const title = item.title?.toLowerCase().split(" ").join("");
-                return (
-                  description.includes(Search) ||
-                  title.includes(Search)
-                );
+                return description.includes(Search) || title.includes(Search);
               })
               .map((item, index) => (
                 <Cards

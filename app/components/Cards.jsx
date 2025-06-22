@@ -29,7 +29,7 @@ const Cards = (props) => {
     <>
       <div
         onClick={handleClick}
-        className="cards  m-0.5 relative bg-gradient-to-t from-stone-850 to-gray-500 p-2 overflow-hidden shrink-0 w-64 h-80 rounded-md border border-gray-400 flex flex-col items-center  "
+        className="cards  m-0.5 relative bg-gradient-to-t to-gray-500 p-2 overflow-hidden shrink-0 w-64 h-80 rounded-md border border-gray-400 flex flex-col items-center  "
         onMouseMove={handleMouseMove}
       >
         <div className="w-full h-40 z-10">
