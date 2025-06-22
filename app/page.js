@@ -34,17 +34,17 @@ export default function Home() {
       />
       <Trendingnews />
       <NewsType
+        type="Anime Trailers"
+        animationData={youtubeAnimation}
+        animationClassName="w-8 h-8 mr-1 ml-0 mt-1 mb-1"
+      />
+      <AnimeTrailers />
+      <NewsType
         type="Anime Rankings"
         animationData={crownAnimation}
         animationClassName="w-8 h-8 mr-1 ml-0 mt-1 mb-1"
       />
       <AnimeRankings />
-      <NewsType
-        type="Anime Trailers"
-        animationData={ youtubeAnimation}
-        animationClassName="w-8 h-8 mr-1 ml-0 mt-1 mb-1"
-      />
-      <AnimeTrailers />
     </div>
   );
 }

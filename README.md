@@ -1,12 +1,12 @@
 # Senpai Central
 
-Senpai Central is a modern web application for anime and manga fans. It brings you trending news, anime rankings, and more—all in one place. The project is built with [Next.js](https://nextjs.org) for the frontend and uses custom Python scrapers for fetching the latest content.
+Senpai Central is a modern web application for anime and manga fans. It brings you trending news, anime rankings, the latest anime trailers, and more—all in one place. The project is built with [Next.js](https://nextjs.org) for the frontend and uses custom Python scrapers for fetching the latest content.
 
 ---
 
 ## ⚠️ Usage Notice
 
-** Please use or deploy this project only after obtaining permission from the repository owner.**
+**Please use or deploy this project only after obtaining permission from the repository owner.**
 
 ---
 
@@ -17,6 +17,9 @@ Senpai Central is a modern web application for anime and manga fans. It brings y
 
 - **Anime Rankings:**  
   Discover top-ranked anime series and movies, updated regularly.
+
+- **Latest Anime Trailers:**  
+  Watch the newest trailers for upcoming and ongoing anime, fetched directly from official sources.
 
 - **Full Article Scraping:**  
   Read complete articles directly within the app, thanks to integrated backend scrapers.
@@ -29,9 +32,6 @@ Senpai Central is a modern web application for anime and manga fans. It brings y
 ## Roadmap
 
 Planned features for future releases:
-
-- **Latest Anime Trailers:**  
-  Watch the newest trailers for upcoming and ongoing anime.
 
 - **User Authentication:**  
   Secure login and signup functionality for a personalized experience.
@@ -79,6 +79,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 
 - `app/` — Next.js frontend code
 - `i-central/app/scrapper/` — Python scrapers for news and articles
+- `app/YT_API/` — Python scripts for fetching anime trailers from YouTube
 - `requirements.txt` — Python dependencies
 - `README.md` — Project documentation
 
@@ -103,5 +104,3 @@ Feel free to suggest features or report bugs.
 MIT License
 
 ---
-
-## Repository

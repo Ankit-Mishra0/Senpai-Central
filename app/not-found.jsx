@@ -23,13 +23,13 @@ const NotFound = () => {
       />
       <NavBar/>
 
-      <div>
+      <div className="flex flex-col items-center justify-center h-full w-full text-center">
         <LottieClient
           animationData={require("./animations/anime.json")}
           loop={true}
-          className="size-100 mb-4 ml-30 mt-10 hover:scale-105 transition-transform duration-300"
+          className="w-100 h-100 mb-4 hover:scale-105 transition-transform duration-300"
         />
-        <h1 className="text-5xl ml-15 font-bold text-gray-800">
+        <h1 className="text-2xl  lg:text-5xl  md:text-4xl  sm:text-3xl   font-bold text-gray-800">
           404 - Page Not Found
         </h1>
       </div>

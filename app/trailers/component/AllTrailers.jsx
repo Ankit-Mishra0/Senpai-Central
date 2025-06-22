@@ -31,7 +31,7 @@ const AllTrailers = () => {
             <LottieClient
               animationData={require("../../animations/loading.json")}
               loop={true}
-              className="size-100 mb-4 ml-30 mt-10 hover:scale-105 transition-transform duration-300"
+              className="size-100 mb-4 ml-[45px] hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>

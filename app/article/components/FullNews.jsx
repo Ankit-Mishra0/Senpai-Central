@@ -29,6 +29,23 @@ const FullNews = () => {
         });
     }
   }, [url]);
+  useEffect(() => {
+    if (!article?.body) return;
+    const container = document.querySelector(".prose");
+    if (!container) return;
+    const tables = container.querySelectorAll("table");
+    tables.forEach((table) => {
+      const headers = Array.from(table.querySelectorAll("thead th")).map(
+        (th) => th.textContent
+      );
+      table.querySelectorAll("tbody tr").forEach((row) => {
+        row.querySelectorAll("td").forEach((td, i) => {
+          if (headers[i]) td.setAttribute("data-label", headers[i]);
+        });
+      });
+    });
+  }, [article]);
+
   if (loading)
     return (
       <div className="min-h-screen flex flex-col justify-center items-center">
@@ -37,7 +54,7 @@ const FullNews = () => {
           <LottieClient
             animationData={require("../../animations/loading.json")}
             loop={true}
-            className="size-100 mb-4 ml-30 mt-10 hover:scale-105 transition-transform duration-300"
+            className="size-100 mb-4 ml-[45px] hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>

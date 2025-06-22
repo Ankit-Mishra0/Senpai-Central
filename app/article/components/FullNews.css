@@ -52,14 +52,12 @@
   font-size: 1.5rem;
   color: rgb(228, 0, 0);
   text-shadow: none;
-  
 }
 .prose strong::before {
   content: "• ";
   color: rgb(228, 0, 0);
   font-size: 1.5rem;
   margin-right: 0.3em;
-  
 }
 .prose table {
   width: 100%;
@@ -91,4 +89,42 @@
   background: #b07ac1;
   color: black;
   transition: background 0.2s;
+}
+@media (max-width: 600px) {
+  .prose table,
+  .prose thead,
+  .prose tbody,
+  .prose tr {
+    display: block;
+    width: 100%;
+  }
+  .prose tr {
+    margin-bottom: 2rem;
+    border: none;
+    background: none;
+  }
+  .prose thead {
+    display: none;
+  }
+  .prose td {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0.6em 0.4em;
+    border: none;
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
+    margin-bottom: 0.5em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  }
+  .prose td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: rgb(216, 69, 216);
+    margin-bottom: 0.2em;
+    font-size: 1.05em;
+    display: block;
+  }
 }

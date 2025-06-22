@@ -4,7 +4,7 @@ import "./Heading.css";
 const Heading = () => {
   return (
     <div className="relative ">
-      <div className="text-6xl md:text-5xl sm:text-4xl font-bold mt-7  gradient-text ">
+      <div className="text-2xl lg:text-6xl md:text-5xl sm:text-4xl font-bold mt-7  gradient-text ">
         Konnichiwa{" "}
         <RotatingText
           texts={["Otaku!", "Anime Fans!", "Weebs!"]}
@@ -14,7 +14,7 @@ const Heading = () => {
         />{" "}
       </div>
 
-      <div className="text-6xl md:text-5xl sm:text-4xl font-bold mt-7 new-text">
+      <div className="text-2xl lg:text-6xl md:text-5xl sm:text-4xl font-bold mt-7 new-text">
         Konnichiwa{" "}
         <RotatingText
           texts={["Otaku!", "Anime Fans!", "Weebs!"]}

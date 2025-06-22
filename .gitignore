@@ -42,4 +42,4 @@ next-env.d.ts
 
 # General logs
 *.log
-logs/
+logs/__pycache__/
