@@ -1,10 +1,13 @@
+"use client"
 import React from "react";
 import Particles from "../components/Particle";
 import FullNews from "./components/FullNews";
 
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const page = () => {
+  const [Load,setLoad]=React.useState(false)
   return (
     <div className="bg-black min-h-screen relative w-full flex flex-col items-center">
       <Particles
@@ -19,7 +22,9 @@ const page = () => {
         disableRotation={false}
       />
       <NavBar />
-      <FullNews />
+      <FullNews onLoad={()=>setLoad(true)}/>
+
+      {Load&&<Footer />}
     </div>
   );
 };

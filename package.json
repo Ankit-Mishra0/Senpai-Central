@@ -16,12 +16,15 @@
     "dotenv": "^16.5.0",
     "framer-motion": "^12.18.1",
     "he": "^1.2.0",
+    "libphonenumber-js": "^1.12.9",
     "lottie-react": "^2.4.1",
     "next": "15.3.3",
+    "nodemailer": "^7.0.3",
     "ogl": "^1.0.11",
     "pg": "^8.16.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-phone-number-input": "^3.4.12",
     "react-rotating-text": "^1.4.1"
   },
   "devDependencies": {

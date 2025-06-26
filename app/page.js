@@ -1,3 +1,5 @@
+"use client"
+import React from "react";
 import Description from "./components/Description";
 import Heading from "./components/Heading";
 import NavBar from "./components/NavBar";
@@ -9,8 +11,10 @@ import youtubeAnimation from "./animations/youtube.json";
 import Trendingnews from "./components/Trendingnews";
 import AnimeRankings from "./components/AnimeRankings";
 import AnimeTrailers from "./components/AnimeTrailers";
+import Footer from "./components/Footer";
 
 export default function Home() {
+  const [newsLoaded, setNewsLoaded] = React.useState(false);
   return (
     <div className="relative bg-black w-full min-h-screen flex flex-col items-center overflow-hidden">
       <Particles
@@ -27,24 +31,29 @@ export default function Home() {
       <NavBar />
       <Heading />
       <Description />
-      <NewsType
+      {newsLoaded&&<NewsType
         type="Trending News"
         animationData={fireAnimation}
         animationClassName="w-8 h-8 mr-1 mb-2"
-      />
-      <Trendingnews />
-      <NewsType
+       href="/news?category=trending"
+      />}
+      <Trendingnews onLoadComplete={() => setNewsLoaded(true)}/>
+      {newsLoaded&&<NewsType
         type="Anime Trailers"
         animationData={youtubeAnimation}
         animationClassName="w-8 h-8 mr-1 ml-0 mt-1 mb-1"
-      />
+        href="/trailers"
+      />}
       <AnimeTrailers />
-      <NewsType
+     {newsLoaded&& <NewsType
         type="Anime Rankings"
         animationData={crownAnimation}
         animationClassName="w-8 h-8 mr-1 ml-0 mt-1 mb-1"
-      />
+        href="/news?category=Ranking"
+      />}
       <AnimeRankings />
+      {newsLoaded&&<Footer/>}
+      
     </div>
   );
 }

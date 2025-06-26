@@ -40,8 +40,8 @@ const AllTrailers = () => {
       ) : (
         <div>
           {" "}
-          <div className="relative flex items-center justify-center ">
-            <div className="absolute h-8 bg-gradient-to-r from-pink-400 via-purple-600 to-blue-800 text-white outline-none mt-5 sm:w-[30%] rounded-xl text-center p-0.5 text-lg font-bold z-0 transform -translate-x-4 blur-lg animate-[pulse_8s_linear_infinite]"></div>
+          <div className="relative flex items-center justify-center ml-6">
+            <div className="absolute h-8 bg-gradient-to-r from-pink-400 via-purple-600 to-blue-800 text-white outline-none mt-5 w-[60%] sm:w-[30%] rounded-xl text-center p-0.5 text-lg font-bold z-0 transform -translate-x-4 blur-lg animate-[pulse_8s_linear_infinite]"></div>
             <input
               className=" bg-gradient-to-r from-gray-400 to-gray-600 text-white outline-none mt-5 sm:w-[30%] rounded-xl text-center p-0.5 text-lg font-bold z-1"
               type="text"

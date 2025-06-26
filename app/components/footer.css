@@ -1,0 +1,15 @@
+.ft{
+  background: linear-gradient(to right, red, #8b5cf3);
+  -webkit-background-clip: text;
+  font-family: Rajdhani, sans-serif;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}.dt{
+  background: linear-gradient(to right, rgb(228, 65, 177), #8b5cf3);
+  font-family: Rajdhani, sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}

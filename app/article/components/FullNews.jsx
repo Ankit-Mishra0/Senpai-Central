@@ -8,7 +8,7 @@ const LottieClient = dynamic(() => import("../../components/LottieClient"), {
   ssr: false,
 });
 
-const FullNews = () => {
+const FullNews = ({onLoad}) => {
   const searchParams = useSearchParams();
   const url = searchParams.get("url");
   const title = searchParams.get("title");
@@ -16,6 +16,7 @@ const FullNews = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     if (url) {
+      setLoading(true);
       fetch(`/api/full-article?url=${encodeURIComponent(url)}`)
         .then((res) => res.json())
         .then((data) => {
@@ -23,12 +24,13 @@ const FullNews = () => {
         })
         .finally(() => {
           setLoading(false);
+          onLoad();
         })
         .catch((err) => {
           console.error("Error fetching article:", err);
         });
     }
-  }, [url]);
+  }, [url,onLoad]);
   useEffect(() => {
     if (!article?.body) return;
     const container = document.querySelector(".prose");

@@ -1,6 +1,7 @@
 import Particles from '@/app/components/Particle'
 import React from 'react'
 import Login from './components/Login'
+import NavBar from '@/app/components/NavBar'
 
 const page = () => {
   return (
@@ -15,6 +16,7 @@ const page = () => {
         alphaParticles={false}
         disableRotation={false}
       />
+      
      <Login/>
      
     </div>

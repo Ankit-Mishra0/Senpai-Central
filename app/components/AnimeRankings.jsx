@@ -3,7 +3,10 @@ import React from "react";
 import "./scroll.css";
 import TiltedCard from "./Cards";
 import { useState, useEffect } from "react";
-
+import dynamic from "next/dynamic";
+const LottieClient = dynamic(() => import("./LottieClient"), {
+  ssr: false,
+});
 
 const AnimeRankings = () => {
     const [rankings, setRankings] = useState([]);

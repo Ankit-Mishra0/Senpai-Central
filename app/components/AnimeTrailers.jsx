@@ -3,6 +3,11 @@ import React from "react";
 import "./scroll.css";
 import he from "he";
 import Trailers_Cards from "./trailer_card";
+import dynamic from "next/dynamic";
+const LottieClient = dynamic(() => import("./LottieClient"), {
+  ssr: false,
+});
+
 const AnimeTrailers = () => {
   const [trailers, setTrailers] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
@@ -15,12 +20,11 @@ const AnimeTrailers = () => {
       .catch((err) => console.error("Error fetching trailers:", err))
       .finally(() => setLoading(false));
   }, []);
-  if (loading) return <p>Loading trailers...</p>;
   if (!trailers.length) return <p>No trailers found.</p>;
   return (
     <div className="trend relative w-full flex flex-row flex-nowrap gap-4 p-2  ">
       {trailers
-       
+
         .filter((trailer) => {
           return (
             trailer.title?.toLowerCase().includes("trailer") &&

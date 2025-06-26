@@ -11,17 +11,21 @@ const LottieClient = dynamic(() => import("./LottieClient"), {
 
 const NavBar = () => {
   const pathname = usePathname();
+  const [navOpen, setNavOpen] = React.useState(false);
+  const toggleNav = () => {
+    setNavOpen(!navOpen);
+  };
 
   return (
-    <div className="flex flex-row items-center bg-transparent w-full h-14 p-4 mx-auto mt-4">
-      <div className="Lottie ">
+    <div className="flex flex-row items-center justify-between bg-transparent w-full h-14 p-4 mx-auto mt-2 mb-4">
+      <Link href="/"><div className="Lottie ">
         <LottieClient
           animationData={require("../animations/anime.json")}
           loop={true}
           className="size-17  border-b-1 mb-2 "
         />
-      </div>
-      <div className="flex flex-row gap-5 items-center mb-2 mx-auto outline-none">
+      </div></Link>
+      <div className="hidden md:flex flex-row gap-5 items-center mb-2 mx-auto outline-none">
         <Link href="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +97,107 @@ const NavBar = () => {
           </svg>
         </Link>
       </div>
-      {/* <h1 className="text-white">login</h1> */}
+      <div className="hidden md:flex">
+        <Link href="/login">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill={pathname === "/login" ? "#a855f7" : "white"}
+            className="inline-block  size-9 svg outline-none"
+            aria-label="login"
+            role="img"
+            tabIndex="0"
+          >
+            <title>Login</title>
+            <path
+              fillRule="evenodd"
+              d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </Link>
+      </div>
+      {/* on mobile nav */}
+      <div className="md:hidden " onClick={toggleNav}>
+        {!navOpen ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            className="inline-block size-9 Msvg outline-none"
+            aria-label="Menu"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            className="inline-block size-9 Msvg outline-none"
+            aria-label="Close Menu"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        )}
+        {navOpen && (
+          <div className="absolute top-20 left-0 w-full bg-black flex flex-col items-center gap-6 py-4 z-50 md:hidden">
+            <Link href="/" onClick={() => setNavOpen(false)}>
+              <span
+                className={`text-lg  ${
+                  pathname === "/" ? "text-purple-500" : "text-white"
+                }`}
+              >
+                Home
+              </span>
+            </Link>
+            <Link href="/news" onClick={() => setNavOpen(false)}>
+              <span
+                className={`text-lg ${
+                  pathname === "/news" ? "text-purple-500 " : "text-white"
+                }`}
+              >
+                News
+              </span>
+            </Link>
+            <Link href="/trailers" onClick={() => setNavOpen(false)}>
+              <span
+                className={`text-lg ${
+                  pathname === "/trailers" ? "text-purple-500" : "text-white"
+                }`}
+              >
+                Trailers
+              </span>
+            </Link>
+            <Link href="/contact-us" onClick={() => setNavOpen(false)}>
+              <span
+                className={`text-lg ${
+                  pathname === "/contact-us" ? "text-purple-500" : "text-white"
+                }`}
+              >
+                Contact Us
+              </span>
+            </Link>
+            <Link href="/login" onClick={() => setNavOpen(false)}>
+              <span
+                className={`text-lg ${
+                  pathname === "/login" ? "text-purple-500" : "text-white"
+                }`}
+              >
+                Login
+              </span>
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
