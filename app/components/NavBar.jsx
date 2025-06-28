@@ -97,7 +97,7 @@ const NavBar = () => {
           </svg>
         </Link>
       </div>
-      <div className="hidden md:flex">
+      {/* <div className="hidden md:flex">
         <Link href="/login">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const NavBar = () => {
             />
           </svg>
         </Link>
-      </div>
+      </div> */}
       {/* on mobile nav */}
       <div className="md:hidden " onClick={toggleNav}>
         {!navOpen ? (
@@ -186,7 +186,7 @@ const NavBar = () => {
                 Contact Us
               </span>
             </Link>
-            <Link href="/login" onClick={() => setNavOpen(false)}>
+            {/* <Link href="/login" onClick={() => setNavOpen(false)}>
               <span
                 className={`text-lg ${
                   pathname === "/login" ? "text-purple-500" : "text-white"
@@ -194,7 +194,7 @@ const NavBar = () => {
               >
                 Login
               </span>
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>

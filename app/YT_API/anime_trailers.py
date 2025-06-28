@@ -28,7 +28,9 @@ def get_anime_trailers():
         )
         if response.status_code == 200:
             data = response.json()
-            trailers.extend(data.get("items", []))
+            for item in data.get("items", []):
+                if item["snippet"]["channelId"] == channelId:
+                    trailers.append(item)
         else:
             print(f"Error fetching data for channel {channelId}: {response.status_code}")
     return trailers

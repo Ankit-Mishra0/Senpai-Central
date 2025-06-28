@@ -10,7 +10,7 @@ const LottieClient = dynamic(() => import("../../components/LottieClient"), {
 const AllNews = () => {
   const searchParams = useSearchParams();
   const category = searchParams.get("category");
-  const [newsType, setNewsType] = React.useState(category||"News");
+  const [newsType, setNewsType] = React.useState(category || "News");
   const [loading, setLoading] = React.useState(true);
   const [articles, setArticles] = React.useState([]);
   const [search, setSearch] = React.useState("");
@@ -111,25 +111,54 @@ const AllNews = () => {
               <SearchIcon />
             </span>
           </div>
-          <div className="relative w-full h-full flex flex-wrap items-center justify-center mt-4 mb-3 gap-6 p-2 ">
-            {articles
-              .filter((item) => {
-                if (!search.trim()) return true;
-                const Search = search.split(" ").join("").toLowerCase();
-                const description =
-                  item.description?.toLowerCase().split(" ").join("") || "";
-                const title = item.title?.toLowerCase().split(" ").join("");
-                return description.includes(Search) || title.includes(Search);
-              })
-              .map((item, index) => (
-                <Cards
-                  key={index}
-                  title={item.title}
-                  url={item.url}
-                  image={item.image}
-                />
-              ))}
-          </div>
+          {newsType != "Ranking" ? (
+            <div className="relative w-full h-full flex flex-wrap items-center justify-center mt-4 mb-3 gap-6 p-2 ">
+              {articles
+                .filter((item) => {
+                  if (!search.trim()) return true;
+                  const Search = search.split(" ").join("").toLowerCase();
+                  const description =
+                    item.description?.toLowerCase().split(" ").join("") || "";
+                  const title = item.title?.toLowerCase().split(" ").join("");
+                  return description.includes(Search) || title.includes(Search);
+                })
+                .map((item, index) => (
+                  <Cards
+                    key={index}
+                    title={item.title}
+                    url={item.url}
+                    image={item.image}
+                  />
+                ))}
+            </div>
+          ) : (
+            <div className="relative w-full h-full flex flex-wrap items-center justify-center mt-4 mb-3 gap-6 p-2 ">
+              {articles
+                .filter((item) => {
+                  const match = item.title && item.title.match(/\d+/);
+                  const isTop10 = !match || parseInt(match[0], 10) <= 10;
+                  if (!search.trim()) return isTop10;
+
+                  const Search = search.split(" ").join("").toLowerCase();
+                  const description =
+                    item.description?.toLowerCase().split(" ").join("") || "";
+
+                  const title = item.title?.toLowerCase().split(" ").join("");
+                  return (
+                    isTop10 &&
+                    (description.includes(Search) || title.includes(Search))
+                  );
+                })
+                .map((item, index) => (
+                  <Cards
+                    key={index}
+                    title={item.title}
+                    url={item.url}
+                    image={item.image}
+                  />
+                ))}
+            </div>
+          )}
         </div>
       )}
     </div>

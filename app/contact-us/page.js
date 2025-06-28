@@ -2,6 +2,7 @@ import React from 'react'
 import Particles from '../components/Particle'
 import NavBar from '../components/NavBar'
 import ContactUs from './components/ContactUs'
+import Footer from '../components/Footer'
 
 const page = () => {
   return (
@@ -19,6 +20,7 @@ const page = () => {
       />
       <NavBar />
       <ContactUs/>
+      <Footer/>
     </div>
   )
 }

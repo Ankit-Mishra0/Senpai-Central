@@ -1,15 +1,58 @@
-.ft{
+.ud {
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"),
+    linear-gradient(to top, #313132, #e5e7eb);
+  background-size: cover, contain; /* You can tweak this */
+  background-repeat: repeat;
+}
+.ft {
   background: linear-gradient(to right, red, #8b5cf3);
   -webkit-background-clip: text;
   font-family: Rajdhani, sans-serif;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-}.dt{
+  position: relative;
+  z-index: 2;
+}
+.nft {
+  position: absolute;
+  background: linear-gradient(to right, red, #8b5cf3);
+  font-family: Rajdhani, sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  top: 0;
+  z-index: 1;
+  transform: scale(1.03);
+  filter: blur(7px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.dt {
   background: linear-gradient(to right, rgb(228, 65, 177), #8b5cf3);
   font-family: Rajdhani, sans-serif;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 300s linear infinite;
+}
+.slide-track {
+  display: flex;
+  width: max-content;
+  gap: 4rem;
+}
+.slide-track:hover {
+  animation-play-state: paused;
 }

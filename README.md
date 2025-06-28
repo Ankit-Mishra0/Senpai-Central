@@ -29,12 +29,19 @@ Senpai Central is a modern web application for anime and manga fans. It brings y
 
 ---
 
-## Roadmap
+## Screenshots
 
-Planned features for future releases:
+### Home Page
 
-- **User Authentication:**  
-  Secure login and signup functionality for a personalized experience.
+![Home Page](./public/home.png)
+
+### News
+
+![News](./public/news.png)
+
+### Trailers
+
+![Trailers](./public/trailers.png)
 
 ---
 
@@ -82,13 +89,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 - `app/YT_API/` — Python scripts for fetching anime trailers from YouTube
 - `requirements.txt` — Python dependencies
 - `README.md` — Project documentation
-
----
-
-## Deployment
-
-Deploy the frontend easily with [Vercel](https://vercel.com/).  
-Backend scrapers can be deployed on any Python-compatible server.
 
 ---
 

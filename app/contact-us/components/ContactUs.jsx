@@ -54,7 +54,7 @@ const ContactUs = () => {
         message: "Failed to send message. Try again!",
       });
     }
-    if (!phone || !isValidPhoneNumber(phone)) {
+    if (phone && !isValidPhoneNumber(phone)) {
       setFeedback({
         type: "error",
         message: "Please enter a valid phone number.",
@@ -70,7 +70,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center overflow-hidden">
+    <div className="w-full mb-20 flex flex-col items-center overflow-hidden">
       <div className="text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mt-1 md:mt-7">
         {" "}
         Contact Us
@@ -150,8 +150,8 @@ const ContactUs = () => {
           <button
             disabled={loading}
             type="submit"
-            className={`bg-gradient-to-r from-pink-600 to-purple-800 p-2 w-[50%] mt-7 rounded-lg hover:from-pink-400 hover:to-purple-600 font-semibold hover:text-white text-xl transition-all duration-100 ease-in ${
-              loading && "text-green-600"
+            className={`bg-gradient-to-r from-pink-600 to-purple-800 p-2 w-[50%] mt-7 rounded-lg  font-semibold text-xl transition-all duration-100 ease-in ${
+              loading ? "text-green-600":" hover:text-white hover:from-pink-400 hover:to-purple-600"
             }`}
           >
             {loading ? "Sending Message..." : "Send Message"}

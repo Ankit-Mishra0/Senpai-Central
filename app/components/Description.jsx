@@ -1,6 +1,6 @@
 import React from "react";
 import "./Description.css";
-// { text-green-950}
+
 
 const Description = () => {
   return (
