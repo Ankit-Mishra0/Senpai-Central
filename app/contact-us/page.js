@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 import ContactUs from './components/ContactUs'
 import Footer from '../components/Footer'
 
-const page = () => {
+const Page = () => {
   return (
     <div  className="bg-black min-h-screen relative w-full flex flex-col items-center">
          <Particles
@@ -25,4 +25,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

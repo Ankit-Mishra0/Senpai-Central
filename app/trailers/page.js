@@ -2,7 +2,7 @@ import React from 'react'
 import Particles from "../components/Particle";
 import NavBar from '../components/NavBar';
 import AllTrailers from './component/AllTrailers';
-const page = props => {
+const Page = props => {
     
   return (
     <div  className="bg-black min-h-screen relative w-full flex flex-col items-center">
@@ -24,4 +24,4 @@ const page = props => {
   )
 }
 
-export default page
+export default Page

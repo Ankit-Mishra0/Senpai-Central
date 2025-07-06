@@ -3,7 +3,7 @@ import Image from "next/image";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import quotes from "./anime-quotes";
+import Quotes from "./anime-quotes";
 import "./footer.css";
 const Footer = () => {
   return (
@@ -98,7 +98,7 @@ const Footer = () => {
       </div>
       <div className="absolute slider overflow-hidden w-full bottom-0 mb-2">
         <div className="slide-track flex whitespace-nowrap animate-marquee">
-          {quotes.map((quote, index) => (
+          {Quotes.map((quote, index) => (
             <span
               key={`quote-${index}`}
               className="text-white text-xl md:text-2xl mx-8 opacity-80 font-semibold"
@@ -106,7 +106,7 @@ const Footer = () => {
               {quote}
             </span>
           ))}
-          {quotes.map((quote, index) => (
+          {Quotes.map((quote, index) => (
             <span
               key={`quote-${index}`}
               className="text-white text-xl md:text-2xl mx-8 opacity-80 font-semibold"

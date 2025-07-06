@@ -1,4 +1,4 @@
-const quotes = [
+const Quotes = [
   "“A lesson without pain is meaningless. That’s because no one can gain without sacrificing something first.” – Edward Elric",
   "“Power comes in response to a need, not a desire.” – Goku",
   "“Forgetting is like a wound. The wound may heal, but it has already left a scar.” – Monkey D. Luffy",
@@ -39,4 +39,4 @@ const quotes = [
   "“My friends are my power—they light the way!” – Natsu Dragneel",
 ];
 
-export default quotes
+export default Quotes

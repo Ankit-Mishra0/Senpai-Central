@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { Suspense } from "react";
 import Particles from "../components/Particle";
-import NavBar from '../components/NavBar';
-import AllNews from './components/AllNews';
-const page = props => {
+import NavBar from "../components/NavBar";
+import AllNews from "./components/AllNews";
+const Page = (props) => {
   return (
-    <div  className="bg-black min-h-screen relative w-full flex flex-col items-center">
-       <Particles
-         className="particles-fixed"
+    <div className="bg-black min-h-screen relative w-full flex flex-col items-center">
+      <Particles
+        className="particles-fixed"
         particleColors={["#ffffff", "#ffffff"]}
         particleCount={1000}
         particleSpread={20}
@@ -17,9 +17,11 @@ const page = props => {
         disableRotation={false}
       />
       <NavBar />
-      <AllNews />
+      <Suspense fallback={null}>
+        <AllNews />
+      </Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
