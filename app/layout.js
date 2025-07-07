@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Senpai Central | Latest Anime Updates",
   description:
-    "Stay updated with the newest anime episodes, manga chapters, and fan-favorite trends. Built for otakus, by otakus.",
+    "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
   keywords: [
     "anime news",
     "latest anime",
@@ -34,6 +34,7 @@ export const metadata = {
     "anime fanbase",
     "anime fandom",
   ],
+  metadataBase: new URL("https://www.senpaicentral.com"),
   authors: [
     {
       name: "Senpai Central",
@@ -41,7 +42,37 @@ export const metadata = {
     },
   ],
   creator: "Senpai Central",
-  metadataBase: "https://www.senpaicentral.com",
+  publisher: "Senpai Central",
+  openGraph: {
+    title: "Senpai Central | Latest Anime Updates",
+    description:
+       "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
+    url: "https://www.senpaicentral.com",
+    siteName: "Senpai Central",
+    images: [
+      {
+        url: "https://www.senpaicentral.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Senpai Central Banner",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Senpai Central | Latest Anime Updates",
+    description:
+       "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
+    images: ["https://www.senpaicentral.com/og-image.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+export const viewport = {
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }) {
