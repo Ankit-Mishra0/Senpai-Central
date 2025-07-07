@@ -34,11 +34,11 @@ export const metadata = {
     "anime fanbase",
     "anime fandom",
   ],
-  metadataBase: new URL("https://senpai-central.vercel.app/og-image.jpg"),
+  metadataBase: new URL("https://senpai-central.vercel.app"),
   authors: [
     {
       name: "Senpai Central",
-      url: "https://senpai-central.vercel.app/og-image.jpg",
+      url: "https://senpai-central.vercel.app",
     },
   ],
   creator: "Senpai Central",
@@ -46,12 +46,12 @@ export const metadata = {
   openGraph: {
     title: "Senpai Central | Latest Anime Updates",
     description:
-       "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
-    url: "https://senpai-central.vercel.app/og-image.jpg",
+      "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
+    url: "https://senpai-central.vercel.app",
     siteName: "Senpai Central",
     images: [
       {
-        url: "https://senpai-central.vercel.app/og-image.jpg/og-image.jpg",
+        url: "https://senpai-central.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Senpai Central Banner",
@@ -64,13 +64,17 @@ export const metadata = {
     card: "summary_large_image",
     title: "Senpai Central | Latest Anime Updates",
     description:
-       "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
-    images: ["https://senpai-central.vercel.app/og-image.jpg/og-image.jpg"],
+      "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
+    images: ["https://senpai-central.vercel.app/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
   },
+  verification: {
+    google: "ey2bUUpX0JeGX0ilE0tCQ38UCgAn6xs7_5ZOPXMJfAw",
+  },
 };
+
 export const viewport = {
   themeColor: "#ffffff",
 };
