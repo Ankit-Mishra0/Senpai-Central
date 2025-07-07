@@ -41,9 +41,8 @@ export const metadata = {
     },
   ],
   creator: "Senpai Central",
-  metedataBase: "https://www.senpaicentral.com",
+  metadataBase: "https://www.senpaicentral.com",
 };
-
 
 export default function RootLayout({ children }) {
   return (
