@@ -1,6 +1,14 @@
 # Senpai Central
 
-Senpai Central is a modern web application for anime and manga fans. It brings you trending news, anime rankings, the latest anime trailers, and more—all in one place. The project is built with [Next.js](https://nextjs.org) for the frontend and uses custom Python scrapers for fetching the latest content.
+[🔗 Live Demo → https://senpai-central.vercel.app](https://senpai-central.vercel.app)
+
+Senpai Central is a modern web application for anime and manga fans. It brings you trending news, anime rankings, the latest anime trailers, and more — all in one place.
+
+> 🚀 **Deployed With:**
+>
+> - **Frontend:** [Vercel](https://vercel.com)
+> - **Backend (Scraper API):** [Render](https://render.com)
+> - **Database:** [Neon](https://neon.tech) (PostgreSQL)
 
 ---
 
