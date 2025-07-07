@@ -34,11 +34,11 @@ export const metadata = {
     "anime fanbase",
     "anime fandom",
   ],
-  metadataBase: new URL("https://www.senpaicentral.com"),
+  metadataBase: new URL("https://senpai-central.vercel.app/og-image.jpg"),
   authors: [
     {
       name: "Senpai Central",
-      url: "https://www.senpaicentral.com",
+      url: "https://senpai-central.vercel.app/og-image.jpg",
     },
   ],
   creator: "Senpai Central",
@@ -47,11 +47,11 @@ export const metadata = {
     title: "Senpai Central | Latest Anime Updates",
     description:
        "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
-    url: "https://www.senpaicentral.com",
+    url: "https://senpai-central.vercel.app/og-image.jpg",
     siteName: "Senpai Central",
     images: [
       {
-        url: "https://www.senpaicentral.com/og-image.jpg",
+        url: "https://senpai-central.vercel.app/og-image.jpg/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Senpai Central Banner",
@@ -65,7 +65,7 @@ export const metadata = {
     title: "Senpai Central | Latest Anime Updates",
     description:
        "Stay updated with the newest anime news, updates, and trailers. Built for otakus, by otakus.",
-    images: ["https://www.senpaicentral.com/og-image.jpg"],
+    images: ["https://senpai-central.vercel.app/og-image.jpg/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
