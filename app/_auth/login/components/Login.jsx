@@ -50,7 +50,7 @@ const Login = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen  relative">
       <h2 className="text-3xl md:text-5xl text-gray-300 m-2 ">Login</h2>
-      <div className="flex flex-row bg-white w-[90%] lg:w-[70%] h-auto lg:h-[70%] rounded-lg">
+      <div className="flex flex-row bg-white w-[90%]   rounded-lg">
         <div className="flex-[1] lg:flex-[0.54] bg-gradient-to-br from-gray-400 to-gray-800 border-r-2 border-black  lg:rounded-l-lg flex flex-col">
           <div className="flex flex-row gap-1.5">
             <LottieClient

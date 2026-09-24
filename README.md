@@ -88,12 +88,23 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
+### 5. Configure Environment Variables
+
+Copy `.env.example` to `.env` in the project root and fill in the values for your local services. For the AI assistant, create a key at [Google AI Studio](https://aistudio.google.com/app/apikey) and set:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+`GEMINI_API_KEY` is read only by the server route at `/api/chat`; do not prefix it with `NEXT_PUBLIC_` or expose it in client-side code. Add the same variables under your Vercel project's Environment Variables for a deployment, then redeploy.
+
 ---
 
 ## Project Structure
 
 - `app/` — Next.js frontend code
-- `i-central/app/scrapper/` — Python scrapers for news and articles
+- `app/scrapper/` — Python scrapers for news and articles
 - `app/YT_API/` — Python scripts for fetching anime trailers from YouTube
 - `requirements.txt` — Python dependencies
 - `README.md` — Project documentation

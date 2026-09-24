@@ -69,7 +69,6 @@ const RotatingText = forwardRef((props, ref) => {
         needsSpace: i !== arr.length - 1,
       }));
     }
-    // For a custom separator
     return currentText.split(splitBy).map((part, i, arr) => ({
       characters: [part],
       needsSpace: i !== arr.length - 1,
@@ -91,7 +90,7 @@ const RotatingText = forwardRef((props, ref) => {
       }
       return Math.abs(staggerFrom - index) * staggerDuration;
     },
-    [staggerFrom, staggerDuration]
+    [staggerFrom, staggerDuration],
   );
 
   const handleIndexChange = useCallback(
@@ -99,7 +98,7 @@ const RotatingText = forwardRef((props, ref) => {
       setCurrentTextIndex(newIndex);
       if (onNext) onNext(newIndex);
     },
-    [onNext]
+    [onNext],
   );
 
   const next = useCallback(() => {
@@ -133,7 +132,7 @@ const RotatingText = forwardRef((props, ref) => {
         handleIndexChange(validIndex);
       }
     },
-    [texts.length, currentTextIndex, handleIndexChange]
+    [texts.length, currentTextIndex, handleIndexChange],
   );
 
   const reset = useCallback(() => {
@@ -150,7 +149,7 @@ const RotatingText = forwardRef((props, ref) => {
       jumpTo,
       reset,
     }),
-    [next, previous, jumpTo, reset]
+    [next, previous, jumpTo, reset],
   );
 
   useEffect(() => {
@@ -175,7 +174,7 @@ const RotatingText = forwardRef((props, ref) => {
         <motion.div
           key={currentTextIndex}
           className={cn(
-            splitBy === "lines" ? "text-rotate-lines" : "text-rotate"
+            splitBy === "lines" ? "text-rotate-lines" : "text-rotate",
           )}
           layout
           aria-hidden="true"
@@ -203,14 +202,14 @@ const RotatingText = forwardRef((props, ref) => {
                         previousCharsCount + charIndex,
                         array.reduce(
                           (sum, word) => sum + word.characters.length,
-                          0
-                        )
+                          0,
+                        ),
                       ),
                     }}
                     className={cn(
                       "text-rotate-element",
                       elementLevelClassName,
-                      mainClassName
+                      mainClassName,
                     )}
                     style={{ display: "inline-block" }}
                   >

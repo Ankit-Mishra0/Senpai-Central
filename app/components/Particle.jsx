@@ -19,7 +19,7 @@ const hexToRgb = (hex) => {
   return [r, g, b];
 };
 
-const vertex = /* glsl */ `
+const vertex = `
   attribute vec3 position;
   attribute vec4 random;
   attribute vec3 color;
@@ -54,7 +54,7 @@ const vertex = /* glsl */ `
   }
 `;
 
-const fragment = /* glsl */ `
+const fragment = `
   precision highp float;
   
   uniform float uTime;
@@ -148,7 +148,7 @@ const Particles = ({
       positions.set([x * r, y * r, z * r], i * 3);
       randoms.set(
         [Math.random(), Math.random(), Math.random(), Math.random()],
-        i * 4
+        i * 4,
       );
       const col = hexToRgb(palette[Math.floor(Math.random() * palette.length)]);
       colors.set(col, i * 3);

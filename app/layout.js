@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import AiChatWidget from "./components/AiChatWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -88,6 +89,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <AiChatWidget />
         <Analytics />
         <SpeedInsights />
       </body>

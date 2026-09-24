@@ -18,13 +18,15 @@ const NavBar = () => {
 
   return (
     <div className="flex flex-row items-center justify-between bg-transparent w-full h-14 p-4 mx-auto mt-2 mb-4">
-      <Link href="/"><div className="Lottie ">
-        <LottieClient
-          animationData={require("../animations/anime.json")}
-          loop={true}
-          className="size-17  border-b-1 mb-2 "
-        />
-      </div></Link>
+      <Link href="/">
+        <div className="Lottie ">
+          <LottieClient
+            animationData={require("../animations/anime.json")}
+            loop={true}
+            className="size-17  border-b-1 mb-2 "
+          />
+        </div>
+      </Link>
       <div className="hidden md:flex flex-row gap-5 items-center mb-2 mx-auto outline-none">
         <Link href="/">
           <svg
@@ -97,27 +99,6 @@ const NavBar = () => {
           </svg>
         </Link>
       </div>
-      {/* <div className="hidden md:flex">
-        <Link href="/login">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill={pathname === "/login" ? "#a855f7" : "white"}
-            className="inline-block  size-9 svg outline-none"
-            aria-label="login"
-            role="img"
-            tabIndex="0"
-          >
-            <title>Login</title>
-            <path
-              fillRule="evenodd"
-              d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </Link>
-      </div> */}
-      {/* on mobile nav */}
       <div className="md:hidden " onClick={toggleNav}>
         {!navOpen ? (
           <svg
@@ -186,15 +167,6 @@ const NavBar = () => {
                 Contact Us
               </span>
             </Link>
-            {/* <Link href="/login" onClick={() => setNavOpen(false)}>
-              <span
-                className={`text-lg ${
-                  pathname === "/login" ? "text-purple-500" : "text-white"
-                }`}
-              >
-                Login
-              </span>
-            </Link> */}
           </div>
         )}
       </div>

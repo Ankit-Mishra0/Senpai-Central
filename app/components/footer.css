@@ -1,7 +1,8 @@
 .ud {
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"),
+  background-image:
+    url("https://www.transparenttextures.com/patterns/asfalt-light.png"),
     linear-gradient(to top, #313132, #e5e7eb);
-  background-size: cover, contain; /* You can tweak this */
+  background-size: cover, contain;
   background-repeat: repeat;
 }
 .ft {
